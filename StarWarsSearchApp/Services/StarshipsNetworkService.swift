@@ -34,31 +34,3 @@ final class StarshipsNetworkServiceImpl: StarshipsNetworkService {
         )
     }
 }
-
-struct Starships: Codable {
-    let results: [Starship]
-}
-
-struct Starship: Codable {
-    let name: String
-    let model: String
-    let manufacturer: String
-    let passengers: String
-    let films: [String]
-}
-
-struct Films: Codable {
-    let results: [Film]
-}
-
-struct Film: Codable {
-    let title: String
-    let episodeId: Int
-    let director: String
-    let producer: String
-    
-    enum CodingKeys: String, CodingKey {
-        case title, director, producer
-        case episodeId = "episode_id"
-    }
-}

@@ -34,14 +34,3 @@ final class PlanetsNetworkServiceImpl: PlanetsNetworkService {
         )
     }
 }
-
-struct Planets: Codable {
-    let results: [Planet]
-}
-
-struct Planet: Codable {
-    let name: String
-    let diameter: String
-    let population: String
-    let films: [String]
-}

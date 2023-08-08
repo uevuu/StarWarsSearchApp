@@ -25,6 +25,10 @@
 		8B8F94E82A81AEDE001FB91A /* UITabBarController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8F94E72A81AEDE001FB91A /* UITabBarController+Extensions.swift */; };
 		8B8F94EA2A81B31F001FB91A /* FilmTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8F94E92A81B31F001FB91A /* FilmTableViewCell.swift */; };
 		8B8F94ED2A81B37B001FB91A /* AddToFavouriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8F94EC2A81B37B001FB91A /* AddToFavouriteButton.swift */; };
+		8B8F94F32A81C850001FB91A /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8F94F22A81C850001FB91A /* Planet.swift */; };
+		8B8F94F52A81C86D001FB91A /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8F94F42A81C86D001FB91A /* Film.swift */; };
+		8B8F94F72A81C884001FB91A /* Starship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8F94F62A81C884001FB91A /* Starship.swift */; };
+		8B8F94FA2A81C8A6001FB91A /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8F94F92A81C8A6001FB91A /* Character.swift */; };
 		8BD90ECB2A7E580100CC8E1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD90ECA2A7E580100CC8E1D /* AppDelegate.swift */; };
 		8BD90ECD2A7E580100CC8E1D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD90ECC2A7E580100CC8E1D /* SceneDelegate.swift */; };
 		8BD90ECF2A7E580100CC8E1D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD90ECE2A7E580100CC8E1D /* SearchViewController.swift */; };
@@ -65,6 +69,10 @@
 		8B8F94E72A81AEDE001FB91A /* UITabBarController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBarController+Extensions.swift"; sourceTree = "<group>"; };
 		8B8F94E92A81B31F001FB91A /* FilmTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmTableViewCell.swift; sourceTree = "<group>"; };
 		8B8F94EC2A81B37B001FB91A /* AddToFavouriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToFavouriteButton.swift; sourceTree = "<group>"; };
+		8B8F94F22A81C850001FB91A /* Planet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
+		8B8F94F42A81C86D001FB91A /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
+		8B8F94F62A81C884001FB91A /* Starship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Starship.swift; sourceTree = "<group>"; };
+		8B8F94F92A81C8A6001FB91A /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		8BD90EC72A7E580100CC8E1D /* StarWarsSearchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWarsSearchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BD90ECA2A7E580100CC8E1D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8BD90ECC2A7E580100CC8E1D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -159,10 +167,41 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		8B8F94EF2A81C7F5001FB91A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8B8F94F22A81C850001FB91A /* Planet.swift */,
+				8B8F94F42A81C86D001FB91A /* Film.swift */,
+				8B8F94F62A81C884001FB91A /* Starship.swift */,
+				8B8F94F92A81C8A6001FB91A /* Character.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8B8F94F02A81C80D001FB91A /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				8BD90ED82A7E580400CC8E1D /* LaunchScreen.storyboard */,
+				8BD90ED32A7E580100CC8E1D /* StarWarsSearchApp.xcdatamodeld */,
+				8BD90ED62A7E580400CC8E1D /* Assets.xcassets */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		8B8F94F12A81C81D001FB91A /* App */ = {
+			isa = PBXGroup;
+			children = (
+				8BD90ECA2A7E580100CC8E1D /* AppDelegate.swift */,
+				8BD90ECC2A7E580100CC8E1D /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		8BD90EBE2A7E580100CC8E1D = {
 			isa = PBXGroup;
 			children = (
 				8BD90EC92A7E580100CC8E1D /* StarWarsSearchApp */,
+				8BD90EDB2A7E580400CC8E1D /* Info.plist */,
 				8BD90EC82A7E580100CC8E1D /* Products */,
 				2DC3F7A1C8E519130FC93FEF /* Pods */,
 				E3DFDDE3204CCD58DF2EBDF0 /* Frameworks */,
@@ -180,15 +219,11 @@
 		8BD90EC92A7E580100CC8E1D /* StarWarsSearchApp */ = {
 			isa = PBXGroup;
 			children = (
+				8B8F94F12A81C81D001FB91A /* App */,
 				8BD90EE32A7E677A00CC8E1D /* Helpers */,
-				8BD90EED2A7E77BD00CC8E1D /* Services */,
+				8B8F94EF2A81C7F5001FB91A /* Models */,
 				8BD90EE72A7E67B900CC8E1D /* Modules */,
-				8BD90ECA2A7E580100CC8E1D /* AppDelegate.swift */,
-				8BD90ECC2A7E580100CC8E1D /* SceneDelegate.swift */,
-				8BD90ED62A7E580400CC8E1D /* Assets.xcassets */,
-				8BD90ED82A7E580400CC8E1D /* LaunchScreen.storyboard */,
-				8BD90EDB2A7E580400CC8E1D /* Info.plist */,
-				8BD90ED32A7E580100CC8E1D /* StarWarsSearchApp.xcdatamodeld */,
+				8BD90EED2A7E77BD00CC8E1D /* Services */,
 			);
 			path = StarWarsSearchApp;
 			sourceTree = "<group>";
@@ -196,6 +231,7 @@
 		8BD90EE32A7E677A00CC8E1D /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				8B8F94F02A81C80D001FB91A /* Other */,
 				8B8F94EB2A81B36F001FB91A /* Components */,
 				8B8F94B32A8178BD001FB91A /* CoreData */,
 				8BD90EE42A7E678800CC8E1D /* Extensions */,
@@ -424,6 +460,7 @@
 				8BD90EE62A7E67A000CC8E1D /* UITableView+Extensions.swift in Sources */,
 				8B8F94ED2A81B37B001FB91A /* AddToFavouriteButton.swift in Sources */,
 				8BD90F082A80E27800CC8E1D /* Resources.swift in Sources */,
+				8B8F94F32A81C850001FB91A /* Planet.swift in Sources */,
 				8BD90EF32A7E782100CC8E1D /* StarshipsNetworkService.swift in Sources */,
 				8BD90ED52A7E580100CC8E1D /* StarWarsSearchApp.xcdatamodeld in Sources */,
 				8B8F94B02A80F319001FB91A /* FavouriteViewController.swift in Sources */,
@@ -438,13 +475,16 @@
 				8BD90ECF2A7E580100CC8E1D /* SearchViewController.swift in Sources */,
 				8B8F94AE2A80F307001FB91A /* FavouriteViewIO.swift in Sources */,
 				8BD90ECB2A7E580100CC8E1D /* AppDelegate.swift in Sources */,
+				8B8F94F52A81C86D001FB91A /* Film.swift in Sources */,
 				8BD90EFF2A7E93FE00CC8E1D /* SearchViewIO.swift in Sources */,
 				8B8F94B22A80F780001FB91A /* FilmsNetworkService.swift in Sources */,
+				8B8F94F72A81C884001FB91A /* Starship.swift in Sources */,
 				8B8F94E12A818512001FB91A /* PlanetEntity+CoreDataProperties.swift in Sources */,
 				8BD90ECD2A7E580100CC8E1D /* SceneDelegate.swift in Sources */,
 				8B8F94DF2A818512001FB91A /* StarshipEntity+CoreDataProperties.swift in Sources */,
 				8BD90F032A80534400CC8E1D /* StarshipTableViewCell.swift in Sources */,
 				8B8F94AC2A80F2B0001FB91A /* FavouritePresenter.swift in Sources */,
+				8B8F94FA2A81C8A6001FB91A /* Character.swift in Sources */,
 				8B8F94EA2A81B31F001FB91A /* FilmTableViewCell.swift in Sources */,
 				8B8F94AA2A80F2A9001FB91A /* FavouritePresenterIO.swift in Sources */,
 				8B8F94C62A817E3E001FB91A /* FavouriteService.swift in Sources */,
