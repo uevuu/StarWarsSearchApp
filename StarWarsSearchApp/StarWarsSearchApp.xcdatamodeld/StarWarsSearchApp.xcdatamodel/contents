@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21754" systemVersion="22E252" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CharacterEntity" representedClassName="CharacterEntity" syncable="YES">
+        <attribute name="gender" attributeType="String"/>
+        <attribute name="name" attributeType="String"/>
+        <attribute name="starshipsCount" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="films" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FilmEntity" inverseName="character" inverseEntity="FilmEntity"/>
+    </entity>
+    <entity name="FilmEntity" representedClassName="FilmEntity" syncable="YES">
+        <attribute name="director" attributeType="String"/>
+        <attribute name="episodeId" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="producer" attributeType="String"/>
+        <attribute name="title" attributeType="String"/>
+        <relationship name="character" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CharacterEntity" inverseName="films" inverseEntity="CharacterEntity"/>
+        <relationship name="planet" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PlanetEntity" inverseName="films" inverseEntity="PlanetEntity"/>
+        <relationship name="starship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="StarshipEntity" inverseName="films" inverseEntity="StarshipEntity"/>
+    </entity>
+    <entity name="PlanetEntity" representedClassName="PlanetEntity" syncable="YES">
+        <attribute name="diameter" attributeType="String"/>
+        <attribute name="name" attributeType="String"/>
+        <attribute name="population" attributeType="String"/>
+        <relationship name="films" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FilmEntity" inverseName="planet" inverseEntity="FilmEntity"/>
+    </entity>
+    <entity name="StarshipEntity" representedClassName="StarshipEntity" syncable="YES">
+        <attribute name="manufacturer" attributeType="String"/>
+        <attribute name="model" attributeType="String"/>
+        <attribute name="name" attributeType="String"/>
+        <attribute name="passengers" attributeType="String"/>
+        <relationship name="films" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FilmEntity" inverseName="starship" inverseEntity="FilmEntity"/>
+    </entity>
+</model>
